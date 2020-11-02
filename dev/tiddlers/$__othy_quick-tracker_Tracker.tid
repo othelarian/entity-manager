@@ -1,7 +1,10 @@
-title: $:/othy/quick-tracker/Tracker
 caption: Tracker
+created: 20201102225650102
+modified: 20201102225703118
+newtitle: 
 tags: $:/tags/SideBar
-newtitle:
+title: $:/othy/quick-tracker/Tracker
+type: text/vnd.tiddlywiki
 
 <$list filter="[tag[$:/tags/quick-tracker]]" variable="item"
 emptyMessage="There is no task to handle">

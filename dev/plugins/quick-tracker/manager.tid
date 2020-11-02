@@ -1,23 +1,50 @@
 title: Quick-Tracker
 
-blabla
+TODO : statistics
 
-<$list filter="{tag[$:/tags/quick-tracker]]" variable="item">
+Active tasks:
 
-aaa <<item>>  ----  <<item!!name>>
+<$list filter="[tag[$:/tags/quick-tracker]sort[name]sort[status]]"
+variable="item" emptyMessage="No task to handle">
+
+<$checkbox tiddler=<<item>> field="status" unchecked="active" checked="done"
+default="active" class="quick-tracker-checklabel">
+<$reveal type="match" text="active" stateTitle="<<item>>" stateField="status">
+<$transclude tiddler=<<item>> field="name"/>
+</$reveal>
+<$reveal type="match" text="done" stateTitle=<<item>> stateField="status">
+~~<$transclude tiddler=<<item>> field="name"/>~~
+</$reveal>
+</$checkbox>
+
+<<item>>
+ {{<<item>>##name}}  ----
 
 </$list>
 
+Already done:
+
+<$list filter="[tag[$:/tags/quick-tracker]status[done]sort[]]"
+variable="item" emptyMessage="No task done yet">
+~~<$transclude tiddler=<<item>> field="name"/>~~
+</$list>
+
+<$reveal>
+<$transclude tiddler=<<item>> field="name"/>
+</$reveal>
+
+
 <$edit-text tiddler="$:/othy/quick-tracker/Tracker" field="newtitle"/>
-
-{{$:/othy/quick-tracker/Tracker!!index}}
-{{tech1!!index}}
-
+<$reveal type="nomatch" text="" state="$:/othy/quick-tracker/Tracker!!newtitle">
 <$button>
+<$action-createtiddler
+$basetitle="$:/othy/quick-tracker/task"
+name={{$:/othy/quick-tracker/Tracker!!newtitle}}
+$template="$:/othy/quick-tracker/Template"/>
 <$action-setfield
-$tiddler="tech1"
-$field="index"
-$value={{$:/othy/quick-tracker/Tracker!!index}}/>
+$tiddler="$:/othy/quick-tracker/Tracker"
+$field="newtitle" $value=""/>
 Add
 </$button>
+</$reveal>
 

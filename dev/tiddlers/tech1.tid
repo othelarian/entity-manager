@@ -1,23 +1,15 @@
 created: 20201101230324649
-index: 0
-modified: 20201102000352126
+index: 1
+modified: 20201102232101426
 tags: technical
 title: tech1
 type: text/vnd.tiddlywiki
 
 blabla
 
-<$set name="myvar" filter={{$:/othy/quick-tracker/Tracker!!index}}>
-<<myvar>>
-<$set>
+---
 
-<$set name="myvar" filter=[[23]add[12]]>
-<<myvar>>
-</$set>
+<$list filter="[tag[$:/tags/quick-tracker]status[done]]" variable="item">
 
-<$set name="basevar" filter="{{$:/othy/quick-tracker/Tracker!!index}}>
-<$set name="myvar"
-filter=[[<basevar>]add[12]]>
-<<myvar>>
-</$set>
-</$set>]
+<$transclude tiddler=<<item>> field="name"/>
+</$list>

@@ -1,8 +1,22 @@
 created: 20201101230240737
-modified: 20201101230604176
+modified: 20201102232254754
 tags: 
 title: Entrypoint
 type: text/vnd.tiddlywiki
+
+Working on: ''Quick Tracker''
+
+TODO (before quick tracker is up):
+
+* separate the active tasks from the done tasks (NEARLY DONE)
+* define a macro to apply style to tasks
+* set up priorities
+* divide active tasks by priorities, with colors, in the manager list
+* customize template to use color and field
+* build the list of the 10 most important tasks
+* make the number of important tasks modifiable
+* statistics
+
 
 Technical tiddlers:
 

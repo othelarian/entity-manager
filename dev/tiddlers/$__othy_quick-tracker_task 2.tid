@@ -1,0 +1,10 @@
+created: 20201102225702063
+modified: 20201102232145376
+name: task three
+priority: could
+status: active
+tags: $:/tags/quick-tracker
+title: $:/othy/quick-tracker/task 2
+type: text/vnd.tiddlywiki
+
+Task: <<!!name>>
