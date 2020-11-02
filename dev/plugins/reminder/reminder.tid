@@ -1,0 +1,6 @@
+title: $:/othy/reminder/Reminder
+caption: Reminder
+tags: $:/tags/SideBar
+
+<$edit tiddler="$:/othy/reminder/saveReminder"/>
+

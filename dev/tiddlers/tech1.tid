@@ -1,0 +1,23 @@
+created: 20201101230324649
+index: 0
+modified: 20201102000352126
+tags: technical
+title: tech1
+type: text/vnd.tiddlywiki
+
+blabla
+
+<$set name="myvar" filter={{$:/othy/quick-tracker/Tracker!!index}}>
+<<myvar>>
+<$set>
+
+<$set name="myvar" filter=[[23]add[12]]>
+<<myvar>>
+</$set>
+
+<$set name="basevar" filter="{{$:/othy/quick-tracker/Tracker!!index}}>
+<$set name="myvar"
+filter=[[<basevar>]add[12]]>
+<<myvar>>
+</$set>
+</$set>]

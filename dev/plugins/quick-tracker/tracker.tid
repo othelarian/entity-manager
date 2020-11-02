@@ -1,0 +1,14 @@
+title: $:/othy/quick-tracker/Tracker
+caption: Tracker
+tags: $:/tags/SideBar
+newtitle:
+index: 0
+
+<$list filter="[tag[$:/tags/quick-tracker]]" variable="item">
+
+aaa <<item!!name>>
+
+</$list>
+
+<$button message="tm-modal" param="Quick-Tracker">Manage</$button>
+

@@ -1,0 +1,9 @@
+{
+  "title": "$:/plugins/othy/reminder",
+  "name": "Reminder",
+  "description": "Never forget something again",
+  "author": "othelarian",
+  "version": "1.0.0",
+  "core-version": ">=5.1.22",
+  "plugin-type": "plugin"
+}

@@ -1,0 +1,23 @@
+title: Quick-Tracker
+
+blabla
+
+<$list filter="{tag[$:/tags/quick-tracker]]" variable="item">
+
+aaa <<item>>  ----  <<item!!name>>
+
+</$list>
+
+<$edit-text tiddler="$:/othy/quick-tracker/Tracker" field="newtitle"/>
+
+{{$:/othy/quick-tracker/Tracker!!index}}
+{{tech1!!index}}
+
+<$button>
+<$action-setfield
+$tiddler="tech1"
+$field="index"
+$value={{$:/othy/quick-tracker/Tracker!!index}}/>
+Add
+</$button>
+
